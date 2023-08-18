@@ -4,16 +4,16 @@ import json
 import os
 
 def main():
-    st.title("Nick's Podcast Newsletter Dashboard")
+    st.title("Welcome to Nick's Dashboard for Podcast Summaries")
 
     available_podcast_info = create_dict_from_json_files('.')
 
     # Left section - Input fields
-    st.sidebar.header("Podcast RSS Feeds")
+    st.sidebar.header("Podcast & RSS Feeds")
 
     # Dropdown box
-    st.sidebar.subheader("Available Podcasts")
-    selected_podcast = st.sidebar.selectbox("Select Podcast", options=available_podcast_info.keys())
+    st.sidebar.subheader("Already Available Podcasts")
+    selected_podcast = st.sidebar.selectbox("Select Desired Podcast Below", options=available_podcast_info.keys())
 
     if selected_podcast:
 
@@ -27,11 +27,11 @@ def main():
         st.write(podcast_info['podcast_details']['episode_title'])
 
         # Display the podcast summary and the cover image in a side-by-side layout
-        col1, col2 = st.columns([7, 3])
+        col1, col2 = st.columns([8, 2])
 
         with col1:
             # Display the podcast episode summary
-            st.subheader("Podcast Episode Summary")
+            st.subheader("Episode Summary")
             st.write(podcast_info['podcast_summary'])
 
         with col2:
@@ -41,19 +41,19 @@ def main():
         col3, col4 = st.columns([3, 7])
 
         with col3:
-            st.subheader("Podcast's Guest or Significant Person within the Episode")
+            st.subheader("Guest or Significant Person in this Episode")
             st.write(podcast_info['podcast_guest']['name'])
 
         with col4:
-            st.subheader("Details")
+            st.subheader("Who are they?")
             st.write(podcast_info["podcast_guest"]['summary'])
 
     # User Input box
-    st.sidebar.subheader("Add and Process a New Podcast Feed")
-    url = st.sidebar.text_input("Paste the Link to RSS Feed")
+    st.sidebar.subheader("Process a New Podcast Below")
+    url = st.sidebar.text_input("Paste the Link to the Podcast's RSS Feed")
 
-    process_button = st.sidebar.button("Process New Podcast")
-    st.sidebar.markdown("**Note**: Podcast processing can take upto 5 mins, please be patient.")
+    process_button = st.sidebar.button("Submit")
+    st.sidebar.markdown("**Note**: Podcast processing can take up to 5 minutes.")
 
     if process_button:
 
@@ -68,11 +68,11 @@ def main():
         st.write(podcast_info['podcast_details']['episode_title'])
 
         # Display the podcast summary and the cover image in a side-by-side layout
-        col1, col2 = st.columns([7, 3])
+        col1, col2 = st.columns([8, 2])
 
         with col1:
             # Display the podcast episode summary
-            st.subheader("Podcast Episode Summary")
+            st.subheader("Episode Summary")
             st.write(podcast_info['podcast_summary'])
 
         with col2:
@@ -82,11 +82,11 @@ def main():
         col3, col4 = st.columns([3, 7])
 
         with col3:
-            st.subheader("Podcast's Guest or Significant Person within the Episode")
+            st.subheader("Guest or Significant Person in this Episode")
             st.write(podcast_info['podcast_guest']['name'])
 
         with col4:
-            st.subheader("Details")
+            st.subheader("Who are they?")
             st.write(podcast_info["podcast_guest"]['summary'])
 
 def create_dict_from_json_files(folder_path):
