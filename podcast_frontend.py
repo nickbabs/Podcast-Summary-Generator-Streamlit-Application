@@ -103,10 +103,10 @@ def main():
         
             return data_dict
         
-        def process_podcast_info(url):
-            f = modal.Function.lookup("corise-podcast-project", "process_podcast")
-            output = f.call(url, '/content/podcast/')
-            return output
+    def process_podcast_info(url):
+        f = modal.Function.lookup("corise-podcast-project", "process_podcast")
+        output = f.call(url, '/content/podcast/')
+        return output
 
 if __name__ == '__main__':
     main()
