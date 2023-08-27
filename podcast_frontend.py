@@ -4,7 +4,7 @@ import json
 import os
 
 def main():
-    st.title("Welcome to Nick's Dashboard for Generating Podcast Summaries")
+    st.title("Hi Welcome to Nick's Dashboard for Generating Podcast Summaries")
     
     # Right section - Newsletter content
     st.header("Let's get started...")
