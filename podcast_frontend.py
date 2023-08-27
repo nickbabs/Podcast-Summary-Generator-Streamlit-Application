@@ -13,7 +13,7 @@ def main():
 
     # Dropdown box
     st.sidebar.subheader("Examples of How Your Podcast Summary Will Look")
-    selected_podcast = st.sidebar.selectbox("Select From List of Example Podcasts Below", options=available_podcast_info.keys())
+    selected_podcast = st.sidebar.selectbox("Select from list of example podcast summaries below.", options=available_podcast_info.keys())
 
     if selected_podcast:
 
@@ -55,7 +55,7 @@ def main():
 
     # User Input box
     st.sidebar.subheader("Processing Your Podcast")
-    url = st.sidebar.text_input("Paste the Link to your desired Podcast's RSS Feed Below")
+    url = st.sidebar.text_input("Paste the link to your desired podcast's RSS feed below.")
 
     process_button = st.sidebar.button("Submit")
     st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
