@@ -20,8 +20,11 @@ def main():
         podcast_info = available_podcast_info[selected_podcast]
 
         # Right section - Newsletter content
-        st.header("Newsletter Content")
-        st.write("Generate a summary about your favorite podcast's most recent episode on my page!")
+        st.header("<---- Let's get started...")
+        st.write("""Generate a summary about your favorite podcast's most recent episode on my page!
+                    Simply copy and paste the link to your podcast's RSS feed on the left side of your screen
+                    and click submit. To find your podcast's RSS feed, search a for your podcast's title on a
+                    podcast search engine website such as listennotes.com""")
 
         # Display the podcast title
         st.subheader("Podcast Episode Title")
