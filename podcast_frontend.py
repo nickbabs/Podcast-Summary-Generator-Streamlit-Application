@@ -46,7 +46,7 @@ def main():
         col3, col4 = st.columns([4, 6])
 
         with col3:
-            st.subheader("Episode Guest / Significant Person")
+            st.subheader("Episode Guest or Significant Person")
             st.write(podcast_info['podcast_guest']['name'])
 
         with col4:
@@ -88,7 +88,7 @@ def main():
         col3, col4 = st.columns([4, 6])
 
         with col3:
-            st.subheader("Episode Guest / Significant Person")
+            st.subheader("Episode Guest or Significant Person")
             st.write(podcast_info['podcast_guest']['name'])
 
         with col4:
