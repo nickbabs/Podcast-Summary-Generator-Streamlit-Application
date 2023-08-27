@@ -21,6 +21,7 @@ def main():
 
         # Right section - Newsletter content
         st.header("Newsletter Content")
+        st.write("Generate a summary about your favorite podcast's most recent episode here!")
 
         # Display the podcast title
         st.subheader("Podcast Episode Title")
