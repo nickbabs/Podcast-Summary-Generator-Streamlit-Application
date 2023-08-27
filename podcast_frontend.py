@@ -23,7 +23,7 @@ def main():
         st.header("Let's get started...")
         st.write("""Generate a summary about your favorite podcast's most recent episode on my page!
                     Simply copy and paste the link to your podcast's RSS feed on the left side of your screen
-                    and click submit. To find your podcast's RSS feed, search for your podcast's title on a
+                    and click process. To find your podcast's RSS feed, search for your podcast's title on a
                     podcast search engine website such as listennotes.com and find the section that says RSS
                     feed. This should provide you with a URL to the podcast's RSS feed.""")
 
@@ -57,7 +57,7 @@ def main():
     st.sidebar.subheader("Processing Your Podcast")
     url = st.sidebar.text_input("Paste the link to your desired podcast's RSS feed below.")
 
-    process_button = st.sidebar.button("Submit")
+    process_button = st.sidebar.button("Process")
     st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
 
     if process_button:
