@@ -50,10 +50,10 @@ def main():
 
     # User Input box
     st.sidebar.subheader("Processing Your Podcast")
-    url = st.sidebar.text_input("Paste the Link to the Podcast's RSS Feed Below")
+    url = st.sidebar.text_input("Paste the Link to your desired Podcast's RSS Feed Below")
 
     process_button = st.sidebar.button("Submit")
-    st.sidebar.markdown("**Note**: Podcast processing can take up to 5 minutes.")
+    st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
 
     if process_button:
 
