@@ -43,10 +43,10 @@ def main():
             st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
-        col3, col4 = st.columns([3, 7])
+        col3, col4 = st.columns([4, 6])
 
         with col3:
-            st.subheader("Guest or Significant Person in this Episode")
+            st.subheader("Episode Guest / Significant Person")
             st.write(podcast_info['podcast_guest']['name'])
 
         with col4:
@@ -85,10 +85,10 @@ def main():
             st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
-        col3, col4 = st.columns([3, 7])
+        col3, col4 = st.columns([4, 6])
 
         with col3:
-            st.subheader("Guest or Significant Person in this Episode")
+            st.subheader("Episode Guest / Significant Person")
             st.write(podcast_info['podcast_guest']['name'])
 
         with col4:
