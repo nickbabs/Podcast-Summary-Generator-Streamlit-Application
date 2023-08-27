@@ -12,7 +12,7 @@ def main():
     st.sidebar.header("Podcast & RSS Feeds")
 
     # Dropdown box
-    st.sidebar.subheader("Examples of How Your Podcast Summary Will Look")
+    st.sidebar.subheader("Examples of How Your Summary Will Look")
     selected_podcast = st.sidebar.selectbox("Select from list of example podcast summaries below.", options=available_podcast_info.keys())
 
     if selected_podcast:
