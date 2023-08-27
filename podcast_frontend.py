@@ -3,10 +3,6 @@ import modal
 import json
 import os
 
-# Clear cache
-def clear_cache():
-    st.caching.clear_cache()
-
 def main():
     st.title("Welcome to Nick's Dashboard for Generating Podcast Summaries")
     
@@ -40,8 +36,6 @@ def main():
     st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
 
     if process_button:
-        clear_cache()
-
         # Call the function to process the URLs and retrieve podcast guest information
         podcast_info = process_podcast_info(url)
         # Display the podcast details
