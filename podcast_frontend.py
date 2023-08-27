@@ -5,6 +5,14 @@ import os
 
 def main():
     st.title("Welcome to Nick's Dashboard for Generating Podcast Summaries")
+    
+    # Right section - Newsletter content
+    st.header("Let's get started...")
+    st.write("""Generate a summary about your favorite podcast's most recent episode on my page!
+                Simply copy and paste the link to your podcast's RSS feed on the left side of your screen
+                and click process. To find your podcast's RSS feed, search for your podcast's title on a
+                podcast search engine website such as listennotes.com and find the section that says RSS
+                feed. This should provide you with a URL to the podcast's RSS feed.""")
 
     available_podcast_info = create_dict_from_json_files('.')
 
@@ -18,14 +26,6 @@ def main():
     if selected_podcast:
 
         podcast_info = available_podcast_info[selected_podcast]
-
-        # Right section - Newsletter content
-        st.header("Let's get started...")
-        st.write("""Generate a summary about your favorite podcast's most recent episode on my page!
-                    Simply copy and paste the link to your podcast's RSS feed on the left side of your screen
-                    and click process. To find your podcast's RSS feed, search for your podcast's title on a
-                    podcast search engine website such as listennotes.com and find the section that says RSS
-                    feed. This should provide you with a URL to the podcast's RSS feed.""")
 
         # Display the podcast title
         st.subheader("Podcast Episode Title")
