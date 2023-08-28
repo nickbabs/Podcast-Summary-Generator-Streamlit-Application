@@ -73,10 +73,12 @@ def display_podcast_details(podcast_info):
     col1, col2 = st.columns([4, 6])    
     with col1:
         st.subheader("Episode Guest or Significant Person")
-        st.write(podcast_info['podcast_guest']['name'])
+        st.write("Name:  ", podcast_info['podcast_guest']['name'])
+        st.write("Organization:  ", podcast_info['podcast_guest']['org'])
+        st.write("Position Held:  ", podcast_info['podcast_guest']['title'])
 
     with col2:
-        st.subheader("Who are they?")
+        st.subheader("Wikipedia Summary")
         st.write(podcast_info["podcast_guest"]['summary'])
 
     
