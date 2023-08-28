@@ -69,7 +69,7 @@ def display_podcast_details(podcast_info):
     st.write(podcast_info['podcast_details']['episode_title'])
     
     # Display the podcast image
-    caption = f"**{podcast_info['podcast_details']['podcast_title']}**"
+    caption = f"{**podcast_info['podcast_details']['podcast_title']**}"
     st.image(podcast_info['podcast_details']['episode_image'], caption = caption, width=275, use_column_width=False)
     
     # Display the podcast episode summary
