@@ -36,9 +36,14 @@ def main():
     st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
 
     if process_button:
+        # Display and initialize a progress bar
+        
         # Call the function to process the URLs and retrieve podcast guest information
         podcast_info = process_podcast_info(url)
-        st.session_state.processed_podcast_info = podcast_info
+        # Display a spinner while processing
+        with st.spinner('Processing your podcast...'):
+            st.session_state.processed_podcast_info = podcast_info
+        
         # Display the podcast details
         display_podcast_details(podcast_info)
 
