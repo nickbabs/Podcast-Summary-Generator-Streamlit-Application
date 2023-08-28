@@ -65,28 +65,26 @@ def create_dict_from_json_files(folder_path):
 
 def display_podcast_details(podcast_info):
     # Display the podcast title
-    col1, col2 = st.columns([8, 2])
+    st.subheader("Podcast Episode Title")
+    st.write(podcast_info['podcast_details']['episode_title'])
+    
+    # Display the podcast image, guest, and their details in a side-by-side layout
+    col1, col2, col3 = st.columns([1, 3, 6])
     with col1:
-        st.subheader("Podcast Episode Title")
-        st.write(podcast_info['podcast_details']['episode_title'])
+        st.image(podcast_info['podcast_details']['episode_image'], caption = podcast_info['podcast_details']['podcast_title'], width=200, use_column_width=True)    
 
     with col2:
-        st.image(podcast_info['podcast_details']['episode_image'], caption = podcast_info['podcast_details']['podcast_title'], width=100, use_column_width=True)
+        st.subheader("Guest or Significant Person")
+        st.write(podcast_info['podcast_guest']['name'])
+
+    with col3:
+        st.subheader("Who are they?")
+        st.write(podcast_info["podcast_guest"]['summary'])
 
     # Display the podcast episode summary
     st.subheader("Episode Summary")
     st.write(podcast_info['podcast_summary'])
 
-    # Display the podcast guest and their details in a side-by-side layout
-    col3, col4 = st.columns([4, 6])
-
-    with col3:
-        st.subheader("Guest or Significant Person")
-        st.write(podcast_info['podcast_guest']['name'])
-
-    with col4:
-        st.subheader("Who are they?")
-        st.write(podcast_info["podcast_guest"]['summary'])
     
 def process_podcast_info(url):
     f = modal.Function.lookup("corise-podcast-project", "process_podcast")
