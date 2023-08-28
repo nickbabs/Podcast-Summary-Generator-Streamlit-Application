@@ -26,7 +26,8 @@ def main():
     st.sidebar.subheader("Processing Your Podcast")
     url = st.sidebar.text_input("Paste the link to your desired podcast's RSS feed below.")
     process_button = st.sidebar.button("Process")
-    st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
+    st.sidebar.markdown("""**Note**: Processing your podcast can take up to 5 minutes.
+                        **Please understand API credits are limited for this page and will run out soon.**""")
     
     if selected_podcast and not process_button:
         podcast_info = available_podcast_info[selected_podcast]
@@ -36,18 +37,8 @@ def main():
     if process_button:
         # Call the function to process the URLs and retrieve podcast guest information
         podcast_info = process_podcast_info(url)
-        # Display a spinner while processing
-        with st.spinner('Processing your podcast...'):
-            st.session_state.processed_podcast_info = podcast_info
-        
         # Display the podcast details
         display_podcast_details(podcast_info)
-    
-    #if process_button:
-        # Call the function to process the URLs and retrieve podcast guest information
-    #    podcast_info = process_podcast_info(url)
-        # Display the podcast details
-    #    display_podcast_details(podcast_info)
 
 def create_dict_from_json_files(folder_path):
     json_files = [f for f in os.listdir(folder_path) if f.endswith('.json')]
