@@ -8,7 +8,8 @@ def main():
     
     # Right section - Newsletter content
     st.header("Let's get started...")
-    st.write("August 28, 2023:  **At this time, please choose a podcast with shorter episodes, must be under 30 minutes.**")
+    st.write("""August 28, 2023:  At this time, please only process a podcast with shorter episodes, **ideally about 25 minutes**.
+                Larger episodes are at risk of using up this page's limited credits, but please feel free to explore the pre-generated summaries in the dropdown!""")
     st.write("""Generate a summary about your favorite podcast's most recent episode on my page! At the
                 left side of the screen, simply copy and paste the link to your podcast's RSS feed and click process. 
                 To find your podcast's RSS feed, search for your podcast's title on a podcast search engine
