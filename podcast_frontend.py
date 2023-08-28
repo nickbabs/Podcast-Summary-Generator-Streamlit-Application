@@ -72,7 +72,7 @@ def display_podcast_details(podcast_info):
     # Display the guest and their details in a side-by-side layout
     col1, col2 = st.columns([4, 6])    
     with col1:
-        st.subheader("Guest or Significant Person")
+        st.subheader("Episode Guest or Significant Person")
         st.write(podcast_info['podcast_guest']['name'])
 
     with col2:
