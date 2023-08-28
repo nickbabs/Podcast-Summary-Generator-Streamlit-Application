@@ -73,9 +73,18 @@ def display_podcast_details(podcast_info):
     col1, col2 = st.columns([4, 6])    
     with col1:
         st.subheader("Episode Guest or Significant Person")
-        st.write("Name:  ", podcast_info['podcast_guest']['name'])
-        st.write("Organization:  ", podcast_info['podcast_guest']['org'])
-        st.write("Position Held:  ", podcast_info['podcast_guest']['title'])
+        if podcast_info['podcast_guest']['name'] is None:
+            st.write("Name:  Unkown")
+        else:
+            st.write("Name:  ", podcast_info['podcast_guest']['name'])
+        if podcast_info['podcast_guest']['org'] is None:
+            st.write("Organization:  Unkown")
+        else:
+            st.write("Organization:  ", podcast_info['podcast_guest']['org'])
+        if podcast_info['podcast_guest']['title'] is None:
+            st.write("Position Held:  Unkown")
+        else:
+            st.write("Position Held:  ", podcast_info['podcast_guest']['title'])
 
     with col2:
         st.subheader("Wikipedia Summary")
