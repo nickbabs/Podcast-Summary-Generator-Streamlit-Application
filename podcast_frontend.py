@@ -65,7 +65,7 @@ def create_dict_from_json_files(folder_path):
 
 def display_podcast_details(podcast_info):
     # Display the podcast title
-    col1, col2 = st.columns([7, 3])
+    col1, col2 = st.columns([8, 2])
     with col1:
         st.subheader("Podcast Episode Title")
         st.write(podcast_info['podcast_details']['episode_title'])
