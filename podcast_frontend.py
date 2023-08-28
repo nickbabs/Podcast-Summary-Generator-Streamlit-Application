@@ -27,8 +27,8 @@ def main():
     # User Input box
     st.sidebar.subheader("Processing Your Podcast")
     url = st.sidebar.text_input("Paste the link to your desired podcast's RSS feed below.")
-    st.sidebar.write("Process button is currently disabled, but will go live at a later date.")
-    process_button = st.sidebar.button("Process", disabled = True)
+    st.sidebar.write("Process button will be disabled tonight 8/28/23, but will go live again at a later date.")
+    process_button = st.sidebar.button("Process", disabled = False)
     st.sidebar.markdown("""Note: Processing your podcast can take up to 5 minutes.
                         **Please understand API credits are limited for this page and will run out soon.**""")
     
