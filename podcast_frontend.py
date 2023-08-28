@@ -22,22 +22,18 @@ def main():
     # Dropdown box
     st.sidebar.subheader("Examples of How Your Summary Will Look")
     selected_podcast = st.sidebar.selectbox("Select from list of example podcast summaries below.", options=available_podcast_info.keys())
-
+    # User Input box
+    st.sidebar.subheader("Processing Your Podcast")
+    url = st.sidebar.text_input("Paste the link to your desired podcast's RSS feed below.")
+    process_button = st.sidebar.button("Process")
+    st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
+    
     if selected_podcast and not process_button:
         podcast_info = available_podcast_info[selected_podcast]
         # Function to display podcast details
         display_podcast_details(podcast_info)
 
-    # User Input box
-    st.sidebar.subheader("Processing Your Podcast")
-    url = st.sidebar.text_input("Paste the link to your desired podcast's RSS feed below.")
-
-    process_button = st.sidebar.button("Process")
-    st.sidebar.markdown("**Note**: Processing your podcast can take up to 5 minutes.")
-
     if process_button:
-        # Display and initialize a progress bar
-        
         # Call the function to process the URLs and retrieve podcast guest information
         podcast_info = process_podcast_info(url)
         # Display a spinner while processing
