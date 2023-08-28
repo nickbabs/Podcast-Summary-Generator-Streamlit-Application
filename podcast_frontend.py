@@ -13,7 +13,7 @@ def main():
                 To find your podcast's RSS feed, search for your podcast's title on a podcast search engine
                 website such as [listennotes.com](https://www.listennotes.com/) and find the section that says RSS
                 feed. This should provide you with a URL to the podcast's RSS feed.
-                <p><b> At this time, please choose a podcast with shorter episodes, must be under 30 minutes.</b><p>""")
+                <p></b> At this time, please choose a podcast with shorter episodes, must be under 30 minutes.</b></p>""")
 
     available_podcast_info = create_dict_from_json_files('.')
 
