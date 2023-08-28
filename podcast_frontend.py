@@ -69,7 +69,7 @@ def display_podcast_details(podcast_info):
     st.write(podcast_info['podcast_details']['episode_title'])
 
     # Display the podcast summary and the cover image in a side-by-side layout
-    col1, col2 = st.columns([8, 2])
+    col1, col2 = st.columns([1, 1])
 
     with col1:
         # Display the podcast episode summary
