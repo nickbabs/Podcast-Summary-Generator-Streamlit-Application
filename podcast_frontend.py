@@ -38,8 +38,18 @@ def main():
     if process_button:
         # Call the function to process the URLs and retrieve podcast guest information
         podcast_info = process_podcast_info(url)
+        st.session_state.processed_podcast_info = podcast_info
         # Display the podcast details
         display_podcast_details(podcast_info)
+
+    if hasattr(st.session_state, 'processed_podcast_info'):
+        display_podcast_details(st.session_state.processed_podcast_info)
+    
+    #if process_button:
+        # Call the function to process the URLs and retrieve podcast guest information
+    #    podcast_info = process_podcast_info(url)
+        # Display the podcast details
+    #    display_podcast_details(podcast_info)
 
 def create_dict_from_json_files(folder_path):
     json_files = [f for f in os.listdir(folder_path) if f.endswith('.json')]
