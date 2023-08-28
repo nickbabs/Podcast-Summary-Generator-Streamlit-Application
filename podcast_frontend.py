@@ -65,25 +65,23 @@ def create_dict_from_json_files(folder_path):
 
 def display_podcast_details(podcast_info):
     # Display the podcast title
-    st.subheader("Podcast Episode Title")
-    st.write(podcast_info['podcast_details']['episode_title'])
-
-    # Display the podcast summary and the cover image in a side-by-side layout
-    col1, col2 = st.columns([9, 1])
-
+    col1, col2 = st.columns([6, 4])
     with col1:
-        # Display the podcast episode summary
-        st.subheader("Episode Summary")
-        st.write(podcast_info['podcast_summary'])
+        st.subheader("Podcast Episode Title")
+        st.write(podcast_info['podcast_details']['episode_title'])
 
     with col2:
         st.image(podcast_info['podcast_details']['episode_image'], caption = podcast_info['podcast_details']['podcast_title'], width=300, use_column_width=True)
+
+    # Display the podcast episode summary
+    st.subheader("Episode Summary")
+    st.write(podcast_info['podcast_summary'])
 
     # Display the podcast guest and their details in a side-by-side layout
     col3, col4 = st.columns([4, 6])
 
     with col3:
-        st.subheader("Episode Guest or Significant Person")
+        st.subheader("Guest or Significant Person")
         st.write(podcast_info['podcast_guest']['name'])
 
     with col4:
