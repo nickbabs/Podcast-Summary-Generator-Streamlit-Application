@@ -23,7 +23,7 @@ def main():
     st.sidebar.subheader("Examples of How Your Summary Will Look")
     selected_podcast = st.sidebar.selectbox("Select from list of example podcast summaries below.", options=available_podcast_info.keys())
 
-    if selected_podcast:
+    if selected_podcast and not process_button:
         podcast_info = available_podcast_info[selected_podcast]
         # Function to display podcast details
         display_podcast_details(podcast_info)
@@ -46,9 +46,6 @@ def main():
         
         # Display the podcast details
         display_podcast_details(podcast_info)
-
-    if hasattr(st.session_state, 'processed_podcast_info'):
-        display_podcast_details(st.session_state.processed_podcast_info)
     
     #if process_button:
         # Call the function to process the URLs and retrieve podcast guest information
