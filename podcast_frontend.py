@@ -29,8 +29,7 @@ def main():
     url = st.sidebar.text_input("Paste the link to your desired podcast's RSS feed below.")
     process_button = st.sidebar.button("Process", disabled = False)
     
-    st.sidebar.markdown("""Note: Processing your podcast can take up to 5 minutes.
-                        **Please understand API credits are limited for this page and will run out soon.**""")
+    st.sidebar.markdown("**Note:** Processing your podcast may take up to 5 minutes.")
 
 
     
