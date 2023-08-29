@@ -8,7 +8,7 @@ def main():
     
     # Right section - Newsletter content
     st.header("Let's get started...")
-    st.write("""**August 28, 2023:  At this time, please process podcasts with shorter episodes, ideally under 25 minutes**.
+    st.write("""**August 28, 2023:  At this time, please process podcasts with shorter episodes, ideally under 30 minutes**.
                 Larger episodes are at risk of timing out and using up this page's limited credits. However, feel free to explore the pre-generated summaries in the dropdown!""")
     st.write("""Generate a summary about your favorite podcast's most recent episode on my page! At the
                 left side of the screen, simply copy and paste the link to your podcast's RSS feed and click process. 
