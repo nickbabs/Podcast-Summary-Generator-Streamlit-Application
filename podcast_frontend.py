@@ -34,7 +34,7 @@ def main():
 
 
     
-    st.sidebar.write("Process button to be disabled this week, will go live again at a later date.")
+    st.sidebar.write("_Process button to be disabled this week, will go live again at a later date._")
     
     if selected_podcast and not process_button:
         podcast_info = available_podcast_info[selected_podcast]
